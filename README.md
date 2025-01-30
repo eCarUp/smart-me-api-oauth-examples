@@ -20,8 +20,31 @@
 
 # Samples
 
+## Authorization Code with PKCE (.net Maui Example)
+
+## Flow
+1. App makes an auth request and shows the login page
+   
+   ![image](https://github.com/user-attachments/assets/9a723952-6aa5-4e74-9de8-7c3b62f99941)
+
+3. User accept that this app can access to the smart-me data
+   
+![image](https://github.com/user-attachments/assets/2dfdee8f-4da7-4751-95f4-9aff34bc18e9)
+
+5. The register deeplink (mysampleapp://callback/ in the sample) is called and the access and refresh token is returned.
+   
+### Setup
+
+#### Create oAuth Application
+1. Go to https://www.smart-me.com and login with your smart-me Account
+2. Go to the API Settings and create an "Public" OAuth Application. As redirect URL choose the deep link defined in the Maui App
+
+![image](https://github.com/user-attachments/assets/9baf54ad-ebdf-4ca0-929c-b060a56e8966)
+
+
 
 ## Device Code
+The device code can be used to give a IoT Device access to the smart-me Api. This without the need to enter and store the username and password on the device.
 
 ## Flow
 1. Device makes an authorize call to /oauth/device
